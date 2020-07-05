@@ -25,7 +25,7 @@ class Home extends StatelessWidget{
       margin: EdgeInsets.all(8.0),
       child:Column(
         children: <Widget>[
-          Image.network(posts[index].imageUrl),
+          Image.network(posts[index].imageUrl,fit:BoxFit.cover,),
           SizedBox(height: 16.0,),
           Text(
             posts[index].title,
