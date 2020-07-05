@@ -11,7 +11,11 @@ class App extends StatelessWidget {
     return MaterialApp(
       home: Home(),
       debugShowCheckedModeBanner: false, //隐藏右上角的debug条
-      theme: ThemeData(primarySwatch: Colors.yellow),
+      theme: ThemeData(
+        primarySwatch: Colors.yellow,
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.3), //高亮颜色
+        splashColor: Colors.white54 //点击时，水波纹效果的颜色
+      ),
     );
   }
 }
@@ -41,6 +45,9 @@ class Home extends StatelessWidget {
               ),
             ],
             bottom: TabBar(
+              unselectedLabelColor: Colors.black26,
+              indicatorColor: Colors.black54,
+              indicatorSize: TabBarIndicatorSize.label,//默认是 .tab 就是整个tab的长度
               tabs: <Widget>[
                 Tab(icon: Icon(Icons.local_florist,)),
                 Tab(icon: Icon(Icons.change_history,)),
