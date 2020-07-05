@@ -11,7 +11,9 @@ class App extends StatelessWidget{
         "Hello",
         textDirection:TextDirection.ltr,
         style: TextStyle(
-          color: Colors.yellow
+          color: Colors.yellow,
+          fontSize: 40.0,
+          fontWeight: FontWeight.bold
         ),
       )
     );
