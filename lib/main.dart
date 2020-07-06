@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './demo/listView_demo.dart';
+import './demo/bottom_navigation_bar_demo.dart';
 
 void main() => runApp(App());
 
@@ -110,29 +111,7 @@ class Home extends StatelessWidget {
               ),
             ],
           )),
-          bottomNavigationBar: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,//当bottomnavigationbaritem >=4 时，底部会变成一片空白，此时需要设置type为fixed
-            fixedColor: Colors.black,
-            currentIndex: 1,
-            items:[
-              BottomNavigationBarItem(
-                icon:Icon(Icons.home),
-                title: Text('Home')
-              ),
-              BottomNavigationBarItem(
-                icon:Icon(Icons.directions_subway),
-                title: Text('Discovery')
-              ),
-              BottomNavigationBarItem(
-                icon:Icon(Icons.people),
-                title: Text('Me')
-              ),
-              BottomNavigationBarItem(
-                icon:Icon(Icons.settings),
-                title: Text('Settings')
-              )
-            ]
-          ),
+          bottomNavigationBar: BottomnavigationBarDemo(),
         ));
   }
 }
