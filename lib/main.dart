@@ -112,6 +112,8 @@ class Home extends StatelessWidget {
           )),
           bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,//当bottomnavigationbaritem >=4 时，底部会变成一片空白，此时需要设置type为fixed
+            fixedColor: Colors.black,
+            currentIndex: 1,
             items:[
               BottomNavigationBarItem(
                 icon:Icon(Icons.home),
