@@ -110,6 +110,18 @@ class Home extends StatelessWidget {
               ),
             ],
           )),
+          bottomNavigationBar: BottomNavigationBar(
+            items:[
+              BottomNavigationBarItem(
+                icon:Icon(Icons.home),
+                title: Text('Home')
+              ),
+              BottomNavigationBarItem(
+                icon:Icon(Icons.people),
+                title: Text('Me')
+              )
+            ]
+          ),
         ));
   }
 }
