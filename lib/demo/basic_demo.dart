@@ -8,6 +8,14 @@ class BasicDemo extends StatelessWidget {
     // TODO: implement build
     // return TextDemo();
     // return RichTextDemo();
+    return ContainerDemo();
+  }
+}
+
+class ContainerDemo extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
     return Container(
       // color: Colors.grey[400],
       decoration: BoxDecoration(
@@ -15,7 +23,7 @@ class BasicDemo extends StatelessWidget {
           image: NetworkImage('http://5b0988e595225.cdn.sohucs.com/q_70,c_zoom,w_640/images/20170819/910d2f57a7e44c9fbecdbafc56382a62.jpeg'),
           // fit: BoxFit.cover
           repeat: ImageRepeat.repeatY,
-          colorFilter: ColorFilter.mode(Colors.purple.withOpacity(0.6), BlendMode.hardLight)//背景滤镜
+          colorFilter: ColorFilter.mode(Colors.purple[200].withOpacity(0.6), BlendMode.hardLight)//背景滤镜
         ),
       ),
       child: Column(
