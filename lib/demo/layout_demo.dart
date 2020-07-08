@@ -6,20 +6,35 @@ class LayoutDemo extends StatelessWidget {
     // TODO: implement build
     return Container(
       child: Column(
-      // child: Row(
-        // mainAxisAlignment: MainAxisAlignment.center, //默认是start
-        // mainAxisAlignment: MainAxisAlignment.end,
-        // mainAxisAlignment: MainAxisAlignment.spaceAround,
-        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        // crossAxisAlignment: CrossAxisAlignment.center, //默认是center
-        // crossAxisAlignment: CrossAxisAlignment.end,
-        // crossAxisAlignment: CrossAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          IconBage(Icons.access_alarm),
-          IconBage(Icons.pool, size: 60.0,),
-          IconBage(Icons.beach_access)
+          SizedBox(
+              width: 200,
+              height: 300,
+              child: Container(
+                  child: Icon(
+                    Icons.ac_unit,
+                    size: 32.0,
+                    color: Colors.white,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(3, 54, 255, 1.0),
+                    borderRadius: BorderRadius.circular(8.0),
+                  ))),
+                  SizedBox(height: 20.0,),
+          SizedBox(
+              width: 100,
+              height: 100,
+              child: Container(
+                  child: Icon(
+                    Icons.brightness_2,
+                    size: 32.0,
+                    color: Colors.white,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(3, 54, 255, 1.0),
+                    borderRadius: BorderRadius.circular(8.0),
+                  )))
         ],
       ),
     );
