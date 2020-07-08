@@ -8,7 +8,27 @@ class LayoutDemo extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Stack( //stack组件中，最大的子组件相当于底板
+          AspectRatio(
+            // aspectRatio: 2.0/1.0,
+            // aspectRatio: 1.0/1.0, // 和aspectRatio:1 效果一致
+            // aspectRatio: 1.4,
+            aspectRatio: 16.0/9.0,
+            child: Container(
+              color: Color.fromRGBO(3, 54, 255, 1.0),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+
+class StackDemo extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Stack( //stack组件中，最大的子组件相当于底板
             // alignment: Alignment.bottomLeft,
             // alignment: Alignment.topRight,
             alignment: Alignment.topLeft,
@@ -106,10 +126,7 @@ class LayoutDemo extends StatelessWidget {
                   )
                   )
             ],
-          )
-        ],
-      ),
-    );
+          );
   }
 }
 
