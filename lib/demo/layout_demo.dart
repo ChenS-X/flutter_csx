@@ -7,15 +7,21 @@ class LayoutDemo extends StatelessWidget {
     return Container(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          ConstrainedBox(
-            //带限制的组件
-            constraints: BoxConstraints(minHeight: 200.0, maxWidth: 200.0),
-            child: Container(
-              color: Color.fromRGBO(3, 54, 255, 1.0),
-            ),
-          )
-        ],
+        children: <Widget>[ConstrainedBoxDemo()],
+      ),
+    );
+  }
+}
+
+class ConstrainedBoxDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return ConstrainedBox(
+      //带限制的组件
+      constraints: BoxConstraints(minHeight: 200.0, maxWidth: 200.0),
+      child: Container(
+        color: Color.fromRGBO(3, 54, 255, 1.0),
       ),
     );
   }
