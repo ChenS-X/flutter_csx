@@ -12,6 +12,8 @@ class LayoutDemo extends StatelessWidget {
               width: 200,
               height: 300,
               child: Container(
+                  // alignment: Alignment.bottomLeft,//相当于Alignment(-1.0,1.0)
+                  alignment: Alignment(0.0, -0.6),
                   child: Icon(
                     Icons.ac_unit,
                     size: 32.0,
@@ -21,7 +23,9 @@ class LayoutDemo extends StatelessWidget {
                     color: Color.fromRGBO(3, 54, 255, 1.0),
                     borderRadius: BorderRadius.circular(8.0),
                   ))),
-                  SizedBox(height: 20.0,),
+          SizedBox(
+            height: 20.0,
+          ),
           SizedBox(
               width: 100,
               height: 100,
