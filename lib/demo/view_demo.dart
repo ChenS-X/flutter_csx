@@ -1,8 +1,50 @@
+
+
 import 'package:flutter/material.dart';
 
 import '../modle/post.dart';
 
 class ViewDemo extends StatelessWidget{
+
+  
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return GridViewCountDemo();
+  }
+}
+
+
+class GridViewCountDemo extends StatelessWidget{
+  List<Widget> _buildTiles(int length){
+    return List.generate(length, (index) => Container(
+        color: Colors.grey[300],
+        alignment: Alignment(0,0),
+        child: Text(
+          'item$index',
+          style:TextStyle(
+            color:Colors.grey[600],
+            fontSize:22.0,
+            fontWeight:FontWeight.bold
+          )
+        ),
+      ));
+  }
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return GridView.count(
+      crossAxisCount:3, //交叉轴上限定的网格个数
+      crossAxisSpacing: 16.0,
+      mainAxisSpacing: 16.0,
+      // scrollDirection: Axis.horizontal,
+      children:_buildTiles(100)
+    );
+  }
+}
+
+class PageViewBuilderDemo extends StatelessWidget{
 
   Widget _pageItemBuilder(BuildContext context,int index) {
     return Stack(
@@ -34,6 +76,7 @@ class ViewDemo extends StatelessWidget{
       ],
     );
   }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
