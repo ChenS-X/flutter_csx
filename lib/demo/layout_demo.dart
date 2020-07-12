@@ -7,7 +7,8 @@ class LayoutDemo extends StatelessWidget {
     return Container(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[ConstrainedBoxDemo()],
+        children: <Widget>[
+          ConstrainedBoxDemo()],
       ),
     );
   }
