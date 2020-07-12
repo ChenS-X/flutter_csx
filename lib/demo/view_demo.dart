@@ -11,9 +11,39 @@ class ViewDemo extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return GridViewCountDemo();
+    return GridViewExtendDemo();
   }
 }
+
+class GridViewExtendDemo extends StatelessWidget{
+  List<Widget> _buildTiles(int length){
+    return List.generate(length, (index) => Container(
+        color: Colors.grey[300],
+        alignment: Alignment(0,0),
+        child: Text(
+          'item$index',
+          style:TextStyle(
+            color:Colors.grey[600],
+            fontSize:22.0,
+            fontWeight:FontWeight.bold
+          )
+        ),
+      ));
+  }
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return GridView.extent(
+      // crossAxisCount:3, //交叉轴上限定的网格个数 ->这个是在 .count中特有的属性
+      maxCrossAxisExtent: 200.0, //在gridview.eextent中，表示在交叉轴上格子的最大尺寸
+      crossAxisSpacing: 16.0,
+      mainAxisSpacing: 16.0,
+      scrollDirection: Axis.horizontal,
+      children:_buildTiles(100)
+    );
+  }
+}
+
 
 
 class GridViewCountDemo extends StatelessWidget{
