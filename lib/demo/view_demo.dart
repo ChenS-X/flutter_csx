@@ -11,7 +11,32 @@ class ViewDemo extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return GridViewExtendDemo();
+    return GridViewBuilderDemo();
+  }
+}
+
+
+class GridViewBuilderDemo extends StatelessWidget{
+
+  Widget _gridBuilder(BuildContext context,int index){
+    return Container(
+      child: Image.network(posts[index].imageUrl,fit:BoxFit.cover),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return GridView.builder(
+      padding: EdgeInsets.all(8.0),
+      itemBuilder: _gridBuilder,
+      itemCount: posts.length,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 3,
+        mainAxisSpacing: 8.0,
+        crossAxisSpacing: 8.0
+      ),
+    );
   }
 }
 
