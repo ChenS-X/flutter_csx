@@ -9,11 +9,24 @@ class SilverDemo extends StatelessWidget{
     return Scaffold(
       body: CustomScrollView(
         slivers: <Widget>[
-          SliverGrid(
+          SilverGridDemo()
+        ],
+      ),
+    );
+  }
+}
+
+
+class SilverGridDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return SliverGrid(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 8.0,
               mainAxisSpacing: 8.0,
+              childAspectRatio: 0.7 //定义网格的宽高比，默认是1.0
             ),
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index){
@@ -26,9 +39,6 @@ class SilverDemo extends StatelessWidget{
               },
               childCount: posts.length
             ),
-          )
-        ],
-      ),
-    );
+          );
   }
 }
