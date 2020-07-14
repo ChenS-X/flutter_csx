@@ -10,8 +10,7 @@ final List<Post> posts = [
   Post(
       author: '匿名',
       title: '好玩的卡通电脑桌面壁纸',
-      imageUrl:
-          'http://pic1.win4000.com/wallpaper/d/525e00294ac25.jpg'),
+      imageUrl: 'http://pic1.win4000.com/wallpaper/d/525e00294ac25.jpg'),
   Post(
       author: '匿名1',
       title: '动漫 卡通',
@@ -46,4 +45,9 @@ final List<Post> posts = [
       author: '尼克斯及zz',
       title: '流氓兔的旅行',
       imageUrl: 'http://pic1.win4000.com/wallpaper/d/525e00640a4fd.jpg'),
+  Post(
+      author: '尼克斯及ww',
+      title: 'kaTong狗',
+      imageUrl:
+          'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594778216326&di=767ae816bf45d2fbdf3853ce0fc6eca2&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F17%2F05%2F28%2F8c7812a87f0e8bcb4c1669cdca350ad2.jpg%2521%2Ffwfh%2F804x923%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue')
 ];
