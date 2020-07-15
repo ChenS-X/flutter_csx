@@ -18,7 +18,7 @@ class App extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       // home: Home(),
-      home: SilverDemo(),
+      home: Home(),
       debugShowCheckedModeBanner: false, //隐藏右上角的debug条
       theme: ThemeData(
           primarySwatch: Colors.yellow,
@@ -79,7 +79,8 @@ class Home extends StatelessWidget {
             BasicDemo(),
             //Icon(Icons.directions_bike, color: Colors.black26, size: 128.0)
             LayoutDemo(),
-            ViewDemo()
+            // ViewDemo()
+            SilverDemo()
           ]),
           drawer: DrawerDemo(),
           bottomNavigationBar: BottomnavigationBarDemo(),
