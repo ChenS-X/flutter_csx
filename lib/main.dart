@@ -21,6 +21,9 @@ class App extends StatelessWidget {
     return MaterialApp(
       // home: Home(),
       home: NavigatorDemo(),
+      routes: {
+        '/about':(context) => PageDemo(title:'About'),
+      },
       debugShowCheckedModeBanner: false, //隐藏右上角的debug条
       theme: ThemeData(
           primarySwatch: Colors.yellow,

@@ -12,9 +12,7 @@ class NavigatorDemo extends StatelessWidget {
             FlatButton(
                 child: Text('About'),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) => Page(title: 'About')));
-                })
+                  Navigator.pushNamed(context, "/about");})
           ],
         ),
       ),
@@ -22,9 +20,9 @@ class NavigatorDemo extends StatelessWidget {
   }
 }
 
-class Page extends StatelessWidget {
+class PageDemo extends StatelessWidget {
   final String title;
-  Page({this.title});
+  PageDemo({this.title});
 
   @override
   Widget build(BuildContext context) {
