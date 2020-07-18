@@ -10,6 +10,8 @@ import './demo/view_demo.dart';
 
 import './demo/silver_demo.dart';
 
+import './demo/navigator_demo.dart';
+
 void main() => runApp(App());
 
 class App extends StatelessWidget {
@@ -18,7 +20,7 @@ class App extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       // home: Home(),
-      home: Home(),
+      home: NavigatorDemo(),
       debugShowCheckedModeBanner: false, //隐藏右上角的debug条
       theme: ThemeData(
           primarySwatch: Colors.yellow,
