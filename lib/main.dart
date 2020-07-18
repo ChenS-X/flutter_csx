@@ -20,8 +20,10 @@ class App extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       // home: Home(),
-      home: NavigatorDemo(),
+      // home: NavigatorDemo(),
+      initialRoute: '/',
       routes: {
+        '/':(context)=>NavigatorDemo(),
         '/about':(context) => PageDemo(title:'About'),
       },
       debugShowCheckedModeBanner: false, //隐藏右上角的debug条
