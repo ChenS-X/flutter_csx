@@ -23,7 +23,7 @@ class App extends StatelessWidget {
       // home: NavigatorDemo(),
       initialRoute: '/',
       routes: {
-        '/':(context)=>NavigatorDemo(),
+        '/':(context)=>Home(),
         '/about':(context) => PageDemo(title:'About'),
       },
       debugShowCheckedModeBanner: false, //隐藏右上角的debug条
